@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #cccccc;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px; 
+        }
+
+        .section h2, .section h3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section p {
+            max-width: 95%;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .text-image-container,
+        .text-image-container2,
+        .gan-section {
+            display: flex;
+            flex-direction: column; /* Change to column for smaller screens */
+            align-items: center; /* Center items */
+            gap: 10px; 
+            margin-bottom: 30px; 
+        }
+
+        .text-content {
+            margin: 0; 
+            flex: 1; 
+            text-align: justify; /* Justify text */
+        }
+
+        .image-content {
+            margin: 0; 
+            flex: 1; 
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .scroll-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100vh;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 0;
+            background-color: #ff5100;
+            border-radius: 5px;
+            transition: height 0.05s ease;
+        }
+
+        .translate-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .gan-section img {
+            max-width: 40%; 
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 600px) {
+            .text-image-container,
+            .text-image-container2,
+            .gan-section {
+                flex-direction: row; /* Change back to row for larger screens */
+                align-items: flex-start; /* Align items at the start */
+            }
+
+            .text-content {
+                flex: 2; /* Give text more space */
+            }
+
+            .image-content {
+                flex: 1; /* Give image less space */
+            }
+
+            .text-image-container img,
+            .text-image-container2 img,
+            .text-image-container3 img,
+            .gan-section img {
+                max-width: 100%; /* Ensure images are responsive */
+                height: auto; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="History.html">History</a>
+        <a href="About.html">About</a>
+        <a href="Info.html">Info</a>
+    </div>
+
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="content">
+        <div class="section">
+            <h3>History</h3>
+            <h2>'AARON' the AI Art Generator</h2>
+            <img src="AARON1.jpeg" alt="AARON Art" width="650" height="428">
+            <p>AARON, Harold Cohen's revolutionary artificial intelligence (AI) program, produced the first piece of AI art. This artwork from 1972 marks a significant turning point in the creativity computers could produce. Its algorithmic approach to art creation sparked conversations about AI's role in artistic expression and the nature of creativity itself. Engineers and artists alike continue to be inspired by AARON's legacy, pushing ongoing study into the crossroads of AI and the arts, shaping the evolving nature of digital creativity.</p>
+        </div>
+
+        <div class="section">
+            <div class="text-image-container">
+                <div class="text-content">
+                    <p>From 1972 to 2010, Harold Cohen developed AARON further. The application was not open-source, and thus, once Cohen passed away in 2016, development on it was put on hold. In the 1980s, after beginning with abstract paintings that grew increasingly detailed over time, AARON began "drawing" rocks, plants, and even humans. Colour was introduced in the 1990s, and in the 2000s, AARON resumed creating abstract art, but this time with colour.</p>
+                    <p>Cohen created AARON's tangible artwork using machinery. Originally, black-and-white drawings were made using specially designed flatbed plotter gear. Occasionally, Cohen would hand-color these pictures or enlarge them for larger paintings. He created computerized painting devices for the production of fabric dye and ink in the 1990s. Afterwards, AARON's photos were printed using a large-scale inkjet printer onto canvases.</p>
+                </div>
+                <img src="AARON2.jpeg" alt="AARON art" width="475" height="363">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Genetic Images</h2>
+            <div class="text-image-container">
+                <img src="Karl_Sims.png" alt="Karl Sims" width="600" height="400">
+                <p>Karl Sims is a computer graphic artist who used genetic algorithms to create digital art. In "Genetic Images," one of his most well-known efforts, he employed genetic algorithms to create abstract visuals. Users would choose from a grid of alternatives the photographs they thought looked good, creating a new generation of photos by combining and altering the selected images. This approach showcased how evolutionary algorithms could be used creatively.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Generative Adversarial Networks (GANs)</h2>
+            <div class="gan-section"> 
+                <p>In 2014, Ian Goodfellow and associates created a class of machine learning frameworks called Generative Adversarial Networks (GANs). A GAN is made up of two neural networks: a discriminator that assesses the validity of generated data and a generator that creates data similar to the training set. The two networks are trained simultaneously, with the generator aiming to trick the discriminator. This adversarial process forces the generator to produce more realistic outputs. GANs have become popular for applications like data augmentation and image production, advancing AI art, virtual reality, and deepfake technology.</p>
+                <img src="Edmond_de_Belamy.jpeg" alt="Expensive AI Art" width="400" height="400">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Nvidia GauGAN</h2>
+            <div class="text-image-container2">
+                <img src="Nvidia.jpeg" alt="Nvidia Image" width="616" height="378">
+                <p>This image is created by Nvidia's GauGAN, a deep learning model that generates photorealistic images from simple sketches. On the left side of the image, there's a simple sketch representing elements like the sky, mountain, river, and grass. The right side displays the photorealistic image generated by GauGAN based on that sketch.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Stable Diffusion</h2>
+            <div class="text-image-container3">
+                <div class="text-content">
+                    <p>In 2022, AI art became mainstream, driven by the success of Latent Diffusion models such as Stability AI’s open-source Stable Diffusion. Diffusion models generate complex data, like images, by transforming random noise through a continuous process. Unlike GANs, they are more stable, easier to control, and can produce high-quality images with lower computational costs, while avoiding issues like mode collapse (when the AI art generator fails to produce diverse outputs). These advantages have made diffusion models a popular alternative to GANs in AI art. The models have made AI art more accessible, fueling the growth of web-based AI art generators.</p>
+                </div>
+                <div class="image-content">
+                    <img src="Stable_Diffusion.jpeg" alt="Stable Diffusion" width="400" height="400">
+                </div>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <video width="320" height="320" autoplay loop>
+                <source src="MyMidjourney.MOV" type="video/mp4">
+            </video>
+            <p>MyMidjourney</p>
+        </div>
+
+        <div class="scroll-slider">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', () => {
+                const progressBar = document.getElementById('progress-bar');
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const docHeight = document.documentElement.scrollHeight;
+                const winHeight = window.innerHeight;
+                const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+                progressBar.style.height = `${scrollPercent}%`;
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Sets the font for the body */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            background-color: #f0f0f0; /* Sets a light grey background */
+        }
+
+        .navbar {
+            display: flex; /* Makes the navbar a flex container */
+            justify-content: space-around; /* Evenly spaces child elements */
+            background-color: #cccccc; /* Sets background color for navbar */
+            padding: 10px 0; /* Adds padding above and below the navbar */
+            position: sticky; /* Keeps the navbar fixed at the top when scrolling */
+            top: 0; /* Specifies that it sticks to the top */
+            z-index: 1000; /* Ensures navbar is above other content */
+            transition: background-color 0.3s; /* Smooth transition for background color changes */
+        }
+
+        .navbar a {
+            text-decoration: none; /* Removes underline from links */
+            color: black; /* Sets text color to black */
+            font-size: 18px; /* Sets font size for links */
+            padding: 10px; /* Adds padding around links */
+            transition: color 0.3s, background-color 0.3s; /* Smooth color transitions */
+            flex: 1; /* Makes links take up equal space */
+            text-align: center; /* Centers text in links */
+        }
+
+        .navbar a:hover {
+            color: white; /* Changes text color to white on hover */
+        }
+
+        .content {
+            padding: 20px; /* Adds padding to content area */
+        }
+
+        .section {
+            margin-bottom: 40px; /* Adds space between sections */
+        }
+
+        .section img {
+            max-width: 100%; /* Ensures images are responsive */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Ensures image is block element */
+            margin: 0 auto 20px; /* Centers image and adds bottom margin */
+        }
+
+        .section h2 {
+            text-align: center; /* Centers section headings */
+            margin-bottom: 20px; /* Adds space below headings */
+        }
+
+        .section p {
+            max-width: 95%; /* Limits paragraph width */
+            margin: 0 auto 20px; /* Centers paragraph and adds bottom margin */
+            line-height: 1.6; /* Improves readability */
+        }
+
+        .video-container {
+            display: flex; /* Makes the video container a flex container */
+            flex-direction: column; /* Arranges items vertically */
+            justify-content: center; /* Centers items vertically */
+            align-items: center; /* Centers items horizontally */
+            margin: 20px 0; /* Adds vertical margin */
+        }
+
+        .video-container p {
+            margin-top: 10px; /* Adds space above the video description */
+            font-size: 16px; /* Sets font size for the description */
+            color: #333; /* Sets description text color */
+        }
+
+        .scroll-slider {
+            position: fixed; /* Fixes the scroll slider to the viewport */
+            top: 0; /* Aligns to the top of the viewport */
+            left: 0; /* Aligns to the left of the viewport */
+            width: 10px; /* Sets width of the scroll slider */
+            height: 100vh; /* Sets height to full viewport height */
+            background-color: #f0f0f0; /* Matches body background */
+            border-radius: 5px; /* Rounds the edges of the slider */
+            overflow: hidden; /* Hides overflow */
+        }
+
+        .scroll-slider .progress-bar {
+            width: 100%; /* Sets width of progress bar to full width of the slider */
+            height: 0; /* Initial height of the progress bar */
+            background-color: #ff5100; /* Sets color of the progress bar */
+            border-radius: 5px; /* Rounds the edges of the progress bar */
+            transition: height 0.05s ease; /* Smooth transition for height changes */
+        }
+
+        .translate-container {
+            display: flex; /* Makes the translation container a flex container */
+            justify-content: center; /* Centers child elements */
+            padding: 10px 0; /* Adds vertical padding */
+        }
+
+        #google_translate_element {
+            position: relative; /* Positions the translation element */
+            z-index: 10; /* Ensures it appears above other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="History.html">History</a>
+        <a href="About.html">About</a>
+        <a href="Info.html">Info</a>
+    </div>
+
+    <!-- Centered Google Translate Element -->
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="content">
+        <div class="section" id="Info">
+            <h2>The Ethics and Legality of AI Art</h2>
+            <p>The rise of AI art has sparked a fierce debate about its ethics and legality. AI art refers to artificial intelligence art created with the help of artificial intelligence algorithms that can generate images, music, or even letters. This innovation raises important questions about creativity, ownership, and the implications of technology for traditional art forms.</p>
+
+            <p><strong>Ethics:</strong> One of the primary ethical concerns involves the role of the artist. Traditional art is deeply personal, often reflecting the unique perspectives and emotions of the creator. AI, on the other hand, generates art based on pre-existing art pieces, leading to concerns about the authenticity and originality of such creations. Critics argue that AI art lacks the depth of emotion and intent that human-made art embodies. Is it also an issue of artist obsession, if AI can create art, will it diminish the power of human creativity, potentially threatening the lives of established artists?</p>
+
+            <p>Another ethical issue is the data used to train AI models. Often AI technology is generated without the consent of the original artists in the use of existing data. This raises concerns about intellectual property rights and the potential for exploitation of artists' works without proper attribution or compensation.</p>
+        </div>
+
+        <div class="section">
+            <img src="Law.jpeg" alt="Law art" width="250" height="250"> <!-- Image with alt text -->
+        </div>
+
+        <div class="section">
+            <p><strong>Legality:</strong> Legally, the ownership of AI-generated art is still gray. Traditional intellectual property laws are based on the premise that the creator is human, so these laws pose challenges to AI. Questions arise as to whose signature, the person who introduced the AI, the user, or the AI itself? Courts and legislators have struggled with these issues, offering different interpretations in different jurisdictions.</p>
+            <p>There is also a risk of copyright infringement. If AI generated art that closely resembles existing works, it could lead to legal disputes. As the use of AI continues to grow in technology, it is likely that legal boards will need to develop these complexities.</p>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video width="320" height="320" autoplay loop>
+            <source src="OpenArt.MOV" type="video/mp4"> <!-- Video source -->
+        </video>
+        <p>OpenArt</p> <!-- Description for the video -->
+    </div>
+
+    <div class="scroll-slider">
+        <div class="progress-bar" id="progress-bar"></div> <!-- Progress bar for scroll tracking -->
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('progress-bar');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get current scroll position
+            const docHeight = document.documentElement.scrollHeight; // Get total document height
+            const winHeight = window.innerHeight; // Get window height
+            const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100; // Calculate scroll percentage
+
+            progressBar.style.height = `${scrollPercent}%`; // Update progress bar height
+        });
+    </script>
+</body>
+</html>

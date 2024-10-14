@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #cccccc;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s, background-color 0.3s;
+            flex: 1;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 95%;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .video-container p {
+            margin-top: 10px; 
+            font-size: 16px;
+            color: #333;
+        }
+
+        .scroll-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100vh;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .scroll-slider .progress-bar {
+            width: 100%;
+            height: 0;
+            background-color: #ff5100;
+            border-radius: 5px;
+            transition: height 0.05s ease;
+        }
+
+        .translate-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        #google_translate_element {
+            margin-left: 10px;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        .goog-te-gadget-icon {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="History.html">History</a>
+        <a href="About.html">About</a>
+        <a href="Info.html">Info</a>
+    </div>
+
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <div class="content">
+        <div class="section" id="About">
+            <h2>How to Write Better Prompts for AI Art Generators</h2>
+            <p><strong>Be Specific and Use Adjectives</strong></p>
+            <p>Begin by identifying the main subject of your image. Be clear about what you want the AI to generate. For example, if you are looking for an image of a beach, simply typing "beach" will not yield a good result. You can elaborate like: 'a calm beach with the rising sun, yellowing sands, and waves gently rolling in.' This gives the AI more context to work with, resulting in a more refined image.</p>
+            <p>The more you provide, the better the AI can understand your vision. Elements such as colors, textures, and compositions can help. For example, instead of saying "the forest," you might say "a dense, misty, tall forest with ancient trees and a narrow, winding path leading into the distance." This helps the AI generate a more complex and visually appealing image.</p>
+
+            <p><strong>Incorporate Different Art Styles</strong></p>
+            <p>The style of artwork is as important as the content. AI art generators can often emulate different art movements or styles, so it helps to include these in your prompts. For example, if you want the image to imitate a painting by Vincent van Gogh, you might add "in the style of Van Gogh, with brush-like texture and vibrant, contrasting colors." You can also specify the movement or art techniques more broadly, such as "print style with soft edges and color" or "photorealistic with fine detail and sharp contrast." By indicating the style, you direct the AI in framing the image according to a specific aesthetic, resulting in outputs that better match your visual preferences.</p>
+
+            <p><strong>Use Emotive Language</strong></p>
+            <p>The way you incorporate or describe the mood can greatly influence the tone of the generated image. Words like "serene," "mysterious," "vibrant," or "melancholic" provide the AI with cues on how to imbue the image with a certain atmosphere. For example, "a serene mountain lake at dawn, soft mist rising from the water and reflecting the first light of the day" conveys a calm and peaceful scene. If you're looking for a sadder image, you might say, "a stormy night over a murky sea, with dark waves and lightning illuminating the surface." These mood cues help AI generate images that evoke specific emotions, making the AI artwork more dynamic.</p>
+
+            <p><strong>Negative Prompts in Certain AI Art Generators</strong></p>
+            <p>Negative prompts are equally important in guiding AI output (for those that have it, as not all AI art generators include negative prompts). These are the rules that tell the AI what to avoid. For example, if you want a futuristic cityscape but don't want any nature elements, you could add "no trees, plants, or natural landscapes." Negative prompts eliminate unwanted elements that might appear in the image due to the interpretation of the AI. Another use of negative prompts is to control the style or tone. If you don't want the image to be too dark or sinister, you can write "avoid dull or cloudy colors." This ensures that the AI generates an image that stays within the scope of your creative vision.</p>
+        </div>
+
+        <div class="video-container">
+            <video width="320" height="320" autoplay loop>
+                <source src="NightCafe.MOV" type="video/mp4">
+            </video>
+            <p>NightCafe</p>
+        </div>
+
+        <div class="scroll-slider">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', () => {
+                const progressBar = document.getElementById('progress-bar');
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const docHeight = document.documentElement.scrollHeight;
+                const winHeight = window.innerHeight;
+                const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+                progressBar.style.height = `${scrollPercent}%`;
+            });
+        </script>
+    </div>
+</body>
+</html>

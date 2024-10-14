@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #cccccc;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s, background-color 0.3s;
+            flex: 1;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            max-width: 800px; /* Set a max width for better readability */
+            margin: 0 auto; /* Center the section */
+            padding: 0 15px; /* Add padding for smaller devices */
+        }
+
+        .container {
+            position: relative; /* Make this container relative */
+            text-align: center;
+            color: white;
+            padding: 15px; /* Added padding for better spacing */
+        }
+
+        .container img {
+            width: 90%; /* Makes the image take up 90% of the screen width */
+            max-width: 900px; /* Ensures the image doesn't grow larger than 900px */
+            height: auto; /* Keeps the aspect ratio */
+            display: block;
+            margin: 20px auto; /* Centers the image and adds space around it */
+            padding: 10px; /* Adds some internal padding around the image */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+        }
+
+        .centered {
+            position: absolute;
+            top: 20%; /* Maintain top position */
+            left: 53.5%; /* Maintain left position for better centering */
+            transform: translate(-50%, -50%); /* Center text relative to its own size */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em; /* Responsive font size */
+            color: white;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .video-container p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .scroll-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100vh;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .scroll-slider .progress-bar {
+            width: 100%;
+            height: 0;
+            background-color: #ff5100;
+            border-radius: 5px;
+            transition: height 0.05s ease;
+        }
+
+        .translate-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        #google_translate_element {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .centered {
+                font-size: 1.5em; /* Smaller font size on smaller devices */
+            }
+
+            .navbar a {
+                font-size: 16px; /* Smaller navbar text */
+            }
+
+            .video-container video {
+                width: 100%; /* Full width for videos on smaller devices */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .container img {
+                width: 95%; /* Image takes up more space on smaller devices */
+                padding: 5px; /* Reduce padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 14px; /* Even smaller navbar text for mobile */
+            }
+
+            .section h2 {
+                font-size: 1.5em; /* Adjust heading size */
+            }
+
+            .container img {
+                width: 100%; /* Full width on very small screens */
+                padding: 5px; /* Small padding on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="History.html">History</a>
+        <a href="About.html">About</a>
+        <a href="Info.html">Info</a>
+    </div>
+
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <img src="JasonAllenAIArt.jpeg" alt="Winning AI art">
+        <div class="centered">An Intro Into AI Art</div>
+    </div>
+
+    <div class="section">
+        <p>Welcome to a website devoted to the amazing realm of artificial intelligence (AI) art. The goal of this website is to dive into the evolution and history of AI art. This website is designed to not only inform and educate but also to offer users written tutorials on prompt writing. These tutorials will guide you through the different platforms where AI art can be created and provide guidance on how to create the best artistic results you want. There will also be insightful information about the possible expenses of various AI art tools and platforms, enabling you to make wise choices as you set off on your creative journey. Beyond the technical, this website will also talk briefly on the ethical and legal issues raised by the emergence of AI art. There will be a brief discussion of the ramifications of artificial intelligence-generated images and the arguments over originality and authorship. This website hopes to help and inspire you as you explore AI art, whether you're a technologist, artist, or just interested in the nexus of creativity and technology.</p>
+    </div>
+
+    <div class="video-container">
+        <video width="320" height="320" autoplay loop muted>
+            <source src="Aitubo.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Aitubo</p>
+    </div>
+
+    <div class="scroll-slider">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('progress-bar');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+            progressBar.style.height = `${scrollPercent}%`;
+        });
+    </script>
+</body>
+</html>
